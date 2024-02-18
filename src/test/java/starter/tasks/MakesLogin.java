@@ -9,12 +9,21 @@ import starter.UI.LoginPage;
 
 public class MakesLogin {
 
-    public static Performable inDemoBlaze(String user, String pass){
+    public static Performable inDemoBlaze(String user, String pass) {
         return Task.where("user can make login",
                 Click.on(HomePage.BTN_LOGIN),
                 Enter.theValue(user).into(LoginPage.INPUT_EMAIL),
                 Enter.theValue(pass).into(LoginPage.INPUT_PASSWORD),
-                Click.on(LoginPage.BTN_LOGIN)
+                Click.on(LoginPage.BTN_LOGIN),
+                WaitWithoutTarget.forDuration(3000)
         );
     }
+
+    public static Performable makesLogout() {
+        return Task.where("user can meke logout",
+                Click.on(LoginPage.BTN_LOGOUT),
+                WaitWithoutTarget.forDuration(5000)
+        );
+    }
+
 }

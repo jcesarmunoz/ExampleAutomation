@@ -10,7 +10,7 @@ import static io.cucumber.junit.platform.engine.Constants.PLUGIN_PROPERTY_NAME;
 @RunWith(CucumberSerenityRunner.class)
 @CucumberOptions(
         features = "src/test/resources/features/search",
-        tags = "@Login"
+        tags = "@Purchase"
 )
 public class CucumberTestSuite {
 }

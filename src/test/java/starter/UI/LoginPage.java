@@ -16,4 +16,6 @@ public class LoginPage {
     public static final Target TEXT_EMAIL =
             Target.the("email user text").locatedBy("//a[@id='nameofuser' and contains(text(),'{0}')]");
 
+    public static final Target BTN_LOGOUT =
+            Target.the("button to logout").located(By.id("logout2"));
 }

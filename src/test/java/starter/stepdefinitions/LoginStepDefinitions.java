@@ -36,10 +36,11 @@ public class LoginStepDefinitions {
         );
     }
 
-    @And("puede ver su {} en el inicio")
-    public void puedeVerSuEnElInicio(String correo) {
+    @And("puede ver su {} en el inicio y realizar el logout")
+    public void puedeVerSuEnElInicioYRealizarElLogout(String correo) {
         theActorInTheSpotlight().attemptsTo(
-                Ensure.that(LoginPage.TEXT_EMAIL.of(correo)).isEnabled()
+                Ensure.that(LoginPage.TEXT_EMAIL.of(correo)).isEnabled(),
+                MakesLogin.makesLogout()
         );
     }
 }
